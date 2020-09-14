@@ -1,5 +1,5 @@
 #---------------------------------------------------#
-## 更新：2020-07-23 05:22:53
+## 更新：2020-09-14 09:21:30
 ## 感谢：https://github.com/Hackl0us/SS-Rule-Snippet
 ## 链接：https://renzhesub.com/link/5cEbsC7rFi5je4pw?clash=1
 #---------------------------------------------------#
@@ -17,7 +17,7 @@ redir-port: 7892
 allow-lan: true
 
 # 规则模式：Rule（规则） / Global（全局代理）/ Direct（全局直连）
-mode: Rule
+mode: rule
 
 # 设置日志输出级别 (默认级别：silent，即不输出任何内容，以避免因日志内容过大而导致程序内存溢出）。
 # 5 个级别：silent / info / warning / error / debug。级别越高日志输出量越大，越倾向于调试，若需要请自行开启。
@@ -34,11 +34,20 @@ secret: ''
 
 
 proxies:
+  - {"name":"[V2]Basic|香港01|2.0|NF*","type":"vmess","server":"hkhkt01.host-sub.com","port":156,"uuid":"f04b463d-34d1-3890-b094-39ed6facf885","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"[V2]Basic|香港02|2.0|NF*","type":"vmess","server":"hkhkt02.host-sub.com","port":156,"uuid":"f04b463d-34d1-3890-b094-39ed6facf885","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"[V2]Basic|香港03|2.0|NF*","type":"vmess","server":"hkhkt03.host-sub.com","port":156,"uuid":"f04b463d-34d1-3890-b094-39ed6facf885","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"[V2]Basic|香港04|2.0|NF*","type":"vmess","server":"hkhkt04.host-sub.com","port":156,"uuid":"f04b463d-34d1-3890-b094-39ed6facf885","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"[V2]Basic|香港05|2.0|NF*","type":"vmess","server":"hkhkt07.host-sub.com","port":156,"uuid":"f04b463d-34d1-3890-b094-39ed6facf885","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"[V2]Basic|香港08|2.0|NF*","type":"vmess","server":"hkhkt08.host-sub.com","port":156,"uuid":"f04b463d-34d1-3890-b094-39ed6facf885","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"[V2]Basic|香港09|2.0|NF*","type":"vmess","server":"hkhkt09.host-sub.com","port":156,"uuid":"f04b463d-34d1-3890-b094-39ed6facf885","alterId":0,"cipher":"auto","udp":true}
+  - {"name":"[V2]Basic|香港10|2.0|NF*","type":"vmess","server":"hkhkt10.host-sub.com","port":156,"uuid":"f04b463d-34d1-3890-b094-39ed6facf885","alterId":0,"cipher":"auto","udp":true}
   - {"name":"*Ultimate|广新IEPL01|3.0|NF*","type":"ss","server":"ieplct9.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
   - {"name":"*Ultimate|广新IEPL02|3.0|NF*","type":"ss","server":"ieplcm10.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
   - {"name":"*Ultimate|广日IEPL01|3.0|NF*","type":"ss","server":"ieplct7.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
   - {"name":"*Ultimate|广日IEPL02|3.0|NF*","type":"ss","server":"ieplcm8.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
   - {"name":"*Ultimate|广日IEPL03|3.0|NF*","type":"ss","server":"ieplcm9.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
+  - {"name":"*Ultimate|广日IEPL04|3.0|NF*","type":"ss","server":"ieplct8.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
   - {"name":"*Ultimate|广港IEPL01|3.0|NF*","type":"ss","server":"ieplct1.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
   - {"name":"*Ultimate|广港IEPL02|3.0|NF*","type":"ss","server":"ieplct2.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
   - {"name":"*Ultimate|广港IEPL03|3.0|NF*","type":"ss","server":"ieplct3.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
@@ -52,81 +61,18 @@ proxies:
   - {"name":"*Ultimate|广港IEPL11|3.0|NF*","type":"ss","server":"ieplcm4.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
   - {"name":"*Ultimate|广港IEPL12|3.0|NF*","type":"ss","server":"ieplcm5.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
   - {"name":"*Ultimate|广港IEPL13|3.0|NF*","type":"ss","server":"ieplcm6.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"*Ultimate|广美IEPL01|3.0|NF*","type":"ss","server":"ieplct8.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
   - {"name":"*Ultimate|广韩IEPL01|3.0|NF*","type":"ss","server":"ieplct10.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Advanced|新加坡1|3.0|NF*","type":"ss","server":"az-sgp-1.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Advanced|新加坡2|3.0|NF*","type":"ss","server":"az-sgp-2.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Advanced|日本01|3.0|NF*","type":"ss","server":"az-jp-7.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Advanced|日本02|3.0|NF*","type":"ss","server":"az-jp-8.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Advanced|美国01|5.0|NF*","type":"ss","server":"uscn2gia1.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Advanced|美国02|5.0|NF*","type":"ss","server":"uscn2gia7.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Advanced|美国03|5.0|NF*","type":"ss","server":"uscn2gia13.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Advanced|美国04|5.0|NF*","type":"ss","server":"uscn2gia19.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Advanced|美国05|5.0|NF*","type":"ss","server":"uscn2gia25.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Advanced|美国06|5.0|NF*","type":"ss","server":"uscn2gia31.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Advanced|美国07|5.0|NF*","type":"ss","server":"uscn2gia2.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Advanced|美国08|5.0|NF*","type":"ss","server":"uscn2gia8.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Advanced|美国09|5.0|NF*","type":"ss","server":"uscn2gia14.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Advanced|美国10|5.0|NF*","type":"ss","server":"uscn2gia20.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Advanced|美国11|5.0|NF*","type":"ss","server":"uscn2gia26.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Advanced|美国12|5.0|NF*","type":"ss","server":"uscn2gia32.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Advanced|美国13|5.0|NF*","type":"ss","server":"uscn2gia3.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Advanced|美国14|5.0|NF*","type":"ss","server":"uscn2gia9.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Advanced|美国15|5.0|NF*","type":"ss","server":"uscn2gia15.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Advanced|美国16|5.0|NF*","type":"ss","server":"uscn2gia21.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Advanced|美国17|5.0|NF*","type":"ss","server":"uscn2gia27.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Advanced|美国18|5.0|NF*","type":"ss","server":"uscn2gia33.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Advanced|美国19|5.0|NF*","type":"ss","server":"uscn2gia4.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Advanced|美国20|5.0|NF*","type":"ss","server":"uscn2gia10.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Advanced|美国21|5.0|NF*","type":"ss","server":"uscn2gia16.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Advanced|美国22|5.0|NF*","type":"ss","server":"uscn2gia22.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Advanced|美国23|5.0|NF*","type":"ss","server":"uscn2gia28.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Advanced|美国24|5.0|NF*","type":"ss","server":"uscn2gia34.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Advanced|美国25|5.0|NF*","type":"ss","server":"uscn2gia5.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Advanced|美国26|5.0|NF*","type":"ss","server":"uscn2gia11.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Advanced|美国27|5.0|NF*","type":"ss","server":"uscn2gia17.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Advanced|美国28|5.0|NF*","type":"ss","server":"uscn2gia23.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Advanced|美国29|5.0|NF*","type":"ss","server":"uscn2gia29.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Advanced|美国30|5.0|NF*","type":"ss","server":"uscn2gia35.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Advanced|美国31|5.0|NF*","type":"ss","server":"uscn2gia6.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Advanced|美国32|5.0|NF*","type":"ss","server":"uscn2gia12.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Advanced|美国33|5.0|NF*","type":"ss","server":"uscn2gia18.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Advanced|美国34|5.0|NF*","type":"ss","server":"uscn2gia24.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Advanced|美国35|5.0|NF*","type":"ss","server":"uscn2gia30.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Advanced|美国36|5.0|NF*","type":"ss","server":"uscn2gia36.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Advanced|韩国1|3.0|NF*","type":"ss","server":"az-kr-3.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Advanced|香港01|3.0|NF*","type":"ss","server":"az-hk-15.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Advanced|香港02|3.0|NF*","type":"ss","server":"az-hk-16.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Advanced|香港03|3.0|NF*","type":"ss","server":"az-hk-17.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Advanced|香港04|3.0|NF*","type":"ss","server":"az-hk-18.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Advanced|香港05|3.0|NF*","type":"ss","server":"az-hk-19.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
   - {"name":"Basic|台湾1|1.0|NF*","type":"ss","server":"twhinet1.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
   - {"name":"Basic|台湾2|1.0|NF*","type":"ss","server":"twhinet3.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
   - {"name":"Basic|台湾3|1.0|NF*","type":"ss","server":"twhinet4.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Basic|新加坡1|3.0|NF*","type":"ss","server":"basic-az-sgp-1.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Basic|新加坡2|3.0|NF*","type":"ss","server":"basic-az-sgp-2.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Basic|日本1|3.0|NF*","type":"ss","server":"az-jp-5.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Basic|日本2|3.0|NF*","type":"ss","server":"az-jp-6.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
   - {"name":"Basic|香港01|1.0|NF*","type":"ss","server":"hkhkt01.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
   - {"name":"Basic|香港02|1.0|NF*","type":"ss","server":"hkhkt02.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
   - {"name":"Basic|香港03|1.0|NF*","type":"ss","server":"hkhkt03.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
   - {"name":"Basic|香港04|1.0|NF*","type":"ss","server":"hkhkt04.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Basic|香港05|1.0|NF*","type":"ss","server":"hkhkt05.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Basic|香港06|1.0|NF*","type":"ss","server":"hkhkt06.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Basic|香港07|1.0|NF*","type":"ss","server":"hkhkt07.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"Basic|香港08|1.0|NF*","type":"ss","server":"hkhkt08.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
+  - {"name":"Basic|香港05|1.0|NF*","type":"ss","server":"hkhkt07.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
+  - {"name":"Basic|香港06|1.0|NF*","type":"ss","server":"hkhkt08.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
   - {"name":"Basic|香港09|1.0|NF*","type":"ss","server":"hkhkt09.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
   - {"name":"Basic|香港10|1.0|NF*","type":"ss","server":"hkhkt10.host-sub.com","port":33168,"cipher":"xchacha20-ietf-poly1305","password":"tSMsnY","udp":true,"plugin":"obfs","plugin-opts":{"mode":"tls","host":"download.windowsupdate.com"}}
-  - {"name":"[V2]Basic|香港01|2.0|NF*","type":"vmess","server":"hkhkt01.host-sub.com","port":156,"uuid":"f04b463d-34d1-3890-b094-39ed6facf885","alterId":0,"cipher":"auto","udp":true}
-  - {"name":"[V2]Basic|香港02|2.0|NF*","type":"vmess","server":"hkhkt02.host-sub.com","port":156,"uuid":"f04b463d-34d1-3890-b094-39ed6facf885","alterId":0,"cipher":"auto","udp":true}
-  - {"name":"[V2]Basic|香港03|2.0|NF*","type":"vmess","server":"hkhkt03.host-sub.com","port":156,"uuid":"f04b463d-34d1-3890-b094-39ed6facf885","alterId":0,"cipher":"auto","udp":true}
-  - {"name":"[V2]Basic|香港04|2.0|NF*","type":"vmess","server":"hkhkt04.host-sub.com","port":156,"uuid":"f04b463d-34d1-3890-b094-39ed6facf885","alterId":0,"cipher":"auto","udp":true}
-  - {"name":"[V2]Basic|香港05|2.0|NF*","type":"vmess","server":"hkhkt05.host-sub.com","port":156,"uuid":"f04b463d-34d1-3890-b094-39ed6facf885","alterId":0,"cipher":"auto","udp":true}
-  - {"name":"[V2]Basic|香港06|2.0|NF*","type":"vmess","server":"hkhkt06.host-sub.com","port":156,"uuid":"f04b463d-34d1-3890-b094-39ed6facf885","alterId":0,"cipher":"auto","udp":true}
-  - {"name":"[V2]Basic|香港07|2.0|NF*","type":"vmess","server":"hkhkt07.host-sub.com","port":156,"uuid":"f04b463d-34d1-3890-b094-39ed6facf885","alterId":0,"cipher":"auto","udp":true}
-  - {"name":"[V2]Basic|香港08|2.0|NF*","type":"vmess","server":"hkhkt08.host-sub.com","port":156,"uuid":"f04b463d-34d1-3890-b094-39ed6facf885","alterId":0,"cipher":"auto","udp":true}
-  - {"name":"[V2]Basic|香港09|2.0|NF*","type":"vmess","server":"hkhkt09.host-sub.com","port":156,"uuid":"f04b463d-34d1-3890-b094-39ed6facf885","alterId":0,"cipher":"auto","udp":true}
-  - {"name":"[V2]Basic|香港10|2.0|NF*","type":"vmess","server":"hkhkt10.host-sub.com","port":156,"uuid":"f04b463d-34d1-3890-b094-39ed6facf885","alterId":0,"cipher":"auto","udp":true}
 
 proxy-groups:
 -
@@ -135,11 +81,20 @@ proxy-groups:
   url: 'http://www.gstatic.com/generate_204'
   interval: 300
   proxies:
+    - '[V2]Basic|香港01|2.0|NF*'
+    - '[V2]Basic|香港02|2.0|NF*'
+    - '[V2]Basic|香港03|2.0|NF*'
+    - '[V2]Basic|香港04|2.0|NF*'
+    - '[V2]Basic|香港05|2.0|NF*'
+    - '[V2]Basic|香港08|2.0|NF*'
+    - '[V2]Basic|香港09|2.0|NF*'
+    - '[V2]Basic|香港10|2.0|NF*'
     - '*Ultimate|广新IEPL01|3.0|NF*'
     - '*Ultimate|广新IEPL02|3.0|NF*'
     - '*Ultimate|广日IEPL01|3.0|NF*'
     - '*Ultimate|广日IEPL02|3.0|NF*'
     - '*Ultimate|广日IEPL03|3.0|NF*'
+    - '*Ultimate|广日IEPL04|3.0|NF*'
     - '*Ultimate|广港IEPL01|3.0|NF*'
     - '*Ultimate|广港IEPL02|3.0|NF*'
     - '*Ultimate|广港IEPL03|3.0|NF*'
@@ -153,81 +108,18 @@ proxy-groups:
     - '*Ultimate|广港IEPL11|3.0|NF*'
     - '*Ultimate|广港IEPL12|3.0|NF*'
     - '*Ultimate|广港IEPL13|3.0|NF*'
-    - '*Ultimate|广美IEPL01|3.0|NF*'
     - '*Ultimate|广韩IEPL01|3.0|NF*'
-    - 'Advanced|新加坡1|3.0|NF*'
-    - 'Advanced|新加坡2|3.0|NF*'
-    - 'Advanced|日本01|3.0|NF*'
-    - 'Advanced|日本02|3.0|NF*'
-    - 'Advanced|美国01|5.0|NF*'
-    - 'Advanced|美国02|5.0|NF*'
-    - 'Advanced|美国03|5.0|NF*'
-    - 'Advanced|美国04|5.0|NF*'
-    - 'Advanced|美国05|5.0|NF*'
-    - 'Advanced|美国06|5.0|NF*'
-    - 'Advanced|美国07|5.0|NF*'
-    - 'Advanced|美国08|5.0|NF*'
-    - 'Advanced|美国09|5.0|NF*'
-    - 'Advanced|美国10|5.0|NF*'
-    - 'Advanced|美国11|5.0|NF*'
-    - 'Advanced|美国12|5.0|NF*'
-    - 'Advanced|美国13|5.0|NF*'
-    - 'Advanced|美国14|5.0|NF*'
-    - 'Advanced|美国15|5.0|NF*'
-    - 'Advanced|美国16|5.0|NF*'
-    - 'Advanced|美国17|5.0|NF*'
-    - 'Advanced|美国18|5.0|NF*'
-    - 'Advanced|美国19|5.0|NF*'
-    - 'Advanced|美国20|5.0|NF*'
-    - 'Advanced|美国21|5.0|NF*'
-    - 'Advanced|美国22|5.0|NF*'
-    - 'Advanced|美国23|5.0|NF*'
-    - 'Advanced|美国24|5.0|NF*'
-    - 'Advanced|美国25|5.0|NF*'
-    - 'Advanced|美国26|5.0|NF*'
-    - 'Advanced|美国27|5.0|NF*'
-    - 'Advanced|美国28|5.0|NF*'
-    - 'Advanced|美国29|5.0|NF*'
-    - 'Advanced|美国30|5.0|NF*'
-    - 'Advanced|美国31|5.0|NF*'
-    - 'Advanced|美国32|5.0|NF*'
-    - 'Advanced|美国33|5.0|NF*'
-    - 'Advanced|美国34|5.0|NF*'
-    - 'Advanced|美国35|5.0|NF*'
-    - 'Advanced|美国36|5.0|NF*'
-    - 'Advanced|韩国1|3.0|NF*'
-    - 'Advanced|香港01|3.0|NF*'
-    - 'Advanced|香港02|3.0|NF*'
-    - 'Advanced|香港03|3.0|NF*'
-    - 'Advanced|香港04|3.0|NF*'
-    - 'Advanced|香港05|3.0|NF*'
     - 'Basic|台湾1|1.0|NF*'
     - 'Basic|台湾2|1.0|NF*'
     - 'Basic|台湾3|1.0|NF*'
-    - 'Basic|新加坡1|3.0|NF*'
-    - 'Basic|新加坡2|3.0|NF*'
-    - 'Basic|日本1|3.0|NF*'
-    - 'Basic|日本2|3.0|NF*'
     - 'Basic|香港01|1.0|NF*'
     - 'Basic|香港02|1.0|NF*'
     - 'Basic|香港03|1.0|NF*'
     - 'Basic|香港04|1.0|NF*'
     - 'Basic|香港05|1.0|NF*'
     - 'Basic|香港06|1.0|NF*'
-    - 'Basic|香港07|1.0|NF*'
-    - 'Basic|香港08|1.0|NF*'
     - 'Basic|香港09|1.0|NF*'
     - 'Basic|香港10|1.0|NF*'
-    - '[V2]Basic|香港01|2.0|NF*'
-    - '[V2]Basic|香港02|2.0|NF*'
-    - '[V2]Basic|香港03|2.0|NF*'
-    - '[V2]Basic|香港04|2.0|NF*'
-    - '[V2]Basic|香港05|2.0|NF*'
-    - '[V2]Basic|香港06|2.0|NF*'
-    - '[V2]Basic|香港07|2.0|NF*'
-    - '[V2]Basic|香港08|2.0|NF*'
-    - '[V2]Basic|香港09|2.0|NF*'
-    - '[V2]Basic|香港10|2.0|NF*'
 -
   name: Domestic
   type: select
