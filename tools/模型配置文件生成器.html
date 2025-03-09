@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>模型配置文件生成器</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .container {
+            max-width: 600px;
+            width: 100%;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            position: relative; /* For language button positioning */
+        }
+        h1 {
+            text-align: center;
+            color: #555;
+            margin-top: 20px; /* Increased distance from top */
+            margin-bottom: 20px; /* Space below the title */
+        }
+        label {
+            display: block;
+            margin: 15px 0 5px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: calc(100% - 16px); /* Adjust for padding */
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        input::placeholder, textarea::placeholder {
+            color: #999;
+        }
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 20px; /* Increased space between options */
+            margin-bottom: 10px;
+        }
+        .checkbox-group div {
+            display: flex;
+            align-items: center;
+        }
+        .checkbox-group input {
+            margin: 0;
+            width: auto; /* Reset width for checkboxes */
+        }
+        .checkbox-group label {
+            font-weight: normal;
+            margin-left: 8px; /* Space between checkbox and label */
+            white-space: nowrap; /* Prevent text wrapping */
+        }
+        button.generate {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px; /* Relative distance from above elements */
+            margin-bottom: 10px; /* Absolute distance from bottom of the white box */
+        }
+        button.generate:hover {
+            background-color: #0056b3;
+        }
+        .language-switch {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .language-switch button {
+            background: none;
+            border: none;
+            color: #007bff;
+            cursor: pointer;
+            font-size: 18px; /* Larger font size for flags */
+        }
+        .language-switch button:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="language-switch">
+            <button id="languageButton" onclick="switchLanguage()">🇨🇳</button>
+        </div>
+        <h1 id="title">模型配置文件生成器</h1>
+        <form id="plistForm">
+            <label for="model_identifier" id="providerLabel">Provider:</label>
+            <input type="text" id="model_identifier" name="model_identifier" placeholder="输入提供商名称" required>
+
+            <label for="endpoint" id="apiUrlLabel">API URL:</label>
+            <input type="text" id="endpoint" name="endpoint" placeholder="http://api.openapi.com/v1/chat/completions" required>
+
+            <label for="token" id="apiKeyLabel">API Key:</label>
+            <input type="text" id="token" name="token" placeholder="输入 API 密钥" required>
+
+            <label id="capabilitiesLabel">Capabilities:</label>
+            <div class="checkbox-group">
+                <div>
+                    <input type="checkbox" name="capabilities" value="visual" id="visual">
+                    <label for="visual" id="visualLabel">Visual</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="capabilities" value="tool" id="tool">
+                    <label for="tool" id="toolLabel">Tool</label>
+                </div>
+            </div>
+
+            <label for="comment" id="commentLabel">Comment:</label>
+            <textarea id="comment" name="comment" rows="3" placeholder="可留空"></textarea>
+
+            <label for="context" id="contextLabel">Context Length:</label>
+            <select id="context" name="context">
+                <option value="4000">4000</option>
+                <option value="8000">8000</option>
+                <option value="16000">16000</option>
+                <option value="32000">32000</option>
+                <option value="64000">64000</option>
+                <option value="100000">100,000</option>
+                <option value="200000">200,000</option>
+                <option value="1000000">1,000,000</option>
+                <option value="2147483647">2,147,483,647</option>
+            </select>
+
+            <button type="button" class="generate" onclick="generatePlist()" id="generateButton">Generate</button>
+        </form>
+    </div>
+
+    <script>
+        // Language data
+        const languageData = {
+            zh: {
+                title: "模型配置文件生成器",
+                providerLabel: "提供商:",
+                apiUrlLabel: "API URL:",
+                apiKeyLabel: "API 密钥:",
+                capabilitiesLabel: "功能:",
+                visualLabel: "视觉",
+                toolLabel: "工具",
+                commentLabel: "备注:",
+                contextLabel: "上下文长度:",
+                generateButton: "生成",
+                providerPlaceholder: "输入提供商名称",
+                apiUrlPlaceholder: "http://api.openapi.com/v1/chat/completions",
+                apiKeyPlaceholder: "输入 API 密钥",
+                commentPlaceholder: "可留空",
+                nextLanguage: "en",
+                nextLanguageIcon: "🇺🇸"
+            },
+            en: {
+                title: "Model Config Generator",
+                providerLabel: "Provider:",
+                apiUrlLabel: "API URL:",
+                apiKeyLabel: "API Key:",
+                capabilitiesLabel: "Capabilities:",
+                visualLabel: "Visual",
+                toolLabel: "Tool",
+                commentLabel: "Comment:",
+                contextLabel: "Context Length:",
+                generateButton: "Generate",
+                providerPlaceholder: "Enter provider name",
+                apiUrlPlaceholder: "http://api.openapi.com/v1/chat/completions",
+                apiKeyPlaceholder: "Enter API Key",
+                commentPlaceholder: "Optional",
+                nextLanguage: "zh",
+                nextLanguageIcon: "🇨🇳"
+            }
+        };
+
+        let currentLanguage = "zh"; // Default to Chinese
+
+        // Switch language
+        function switchLanguage() {
+            const nextLanguage = languageData[currentLanguage].nextLanguage;
+            const data = languageData[nextLanguage];
+            document.getElementById('title').textContent = data.title;
+            document.getElementById('providerLabel').textContent = data.providerLabel;
+            document.getElementById('apiUrlLabel').textContent = data.apiUrlLabel;
+            document.getElementById('apiKeyLabel').textContent = data.apiKeyLabel;
+            document.getElementById('capabilitiesLabel').textContent = data.capabilitiesLabel;
+            document.getElementById('visualLabel').textContent = data.visualLabel;
+            document.getElementById('toolLabel').textContent = data.toolLabel;
+            document.getElementById('commentLabel').textContent = data.commentLabel;
+            document.getElementById('contextLabel').textContent = data.contextLabel;
+            document.getElementById('generateButton').textContent = data.generateButton;
+            document.getElementById('model_identifier').placeholder = data.providerPlaceholder;
+            document.getElementById('endpoint').placeholder = data.apiUrlPlaceholder;
+            document.getElementById('token').placeholder = data.apiKeyPlaceholder;
+            document.getElementById('comment').placeholder = data.commentPlaceholder;
+            document.getElementById('languageButton').textContent = data.nextLanguageIcon;
+            currentLanguage = nextLanguage;
+        }
+
+        // Generate PLIST
+        function generatePlist() {
+            const capabilities = Array.from(document.querySelectorAll('input[name="capabilities"]:checked')).map(c => c.value);
+            const comment = document.getElementById('comment').value;
+            const context = document.getElementById('context').value;
+            let endpoint = document.getElementById('endpoint').value.trim();
+            const modelIdentifier = document.getElementById('model_identifier').value.trim();
+            const token = document.getElementById('token').value.trim();
+
+            // Ensure API URL starts with https:// and ends with /chat/completions
+            if (!endpoint.startsWith('https://')) {
+                endpoint = 'https://' + endpoint;
+            }
+            if (!endpoint.endsWith('/chat/completions')) {
+                endpoint += '/chat/completions';
+            }
+
+            const id = self.crypto.randomUUID().toUpperCase(); // Ensure UUID is in uppercase
+            const creation = new Date().toISOString().split('.')[0] + 'Z'; // Remove milliseconds
+
+            const plistContent = `<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>capabilities</key>
+    <array>
+        ${capabilities.map(c => `<string>${c}</string>`).join('\n        ')}
+    </array>
+    <key>comment</key>
+    <string>${comment}</string>
+    <key>context</key>
+    <integer>${context}</integer>
+    <key>creation</key>
+    <date>${creation}</date>
+    <key>endpoint</key>
+    <string>${endpoint}</string>
+    <key>id</key>
+    <string>${id}</string>
+    <key>isProfileInControl</key>
+    <true/>
+    <key>model_identifier</key>
+    <string>${modelIdentifier}</string>
+    <key>model_list_endpoint</key>
+    <string>$INFERENCE_ENDPOINT$/../../models</string>
+    <key>token</key>
+    <string>${token}</string>
+</dict>
+</plist>`;
+
+            const blob = new Blob([plistContent], { type: 'application/x-plist' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `${modelIdentifier}.plist`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
+        // Initialize language button
+        document.getElementById('languageButton').textContent = languageData[currentLanguage].nextLanguageIcon;
+    </script>
+</body>
+</html>
