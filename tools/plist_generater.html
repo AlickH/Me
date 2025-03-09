@@ -109,31 +109,31 @@
         </div>
         <h1 id="title">模型配置文件生成器</h1>
         <form id="plistForm">
-            <label for="model_identifier" id="providerLabel">Provider:</label>
+            <label for="model_identifier" id="providerLabel">提供商:</label>
             <input type="text" id="model_identifier" name="model_identifier" placeholder="输入提供商名称" required>
 
             <label for="endpoint" id="apiUrlLabel">API URL:</label>
             <input type="text" id="endpoint" name="endpoint" placeholder="http://api.openapi.com/v1/chat/completions" required>
 
-            <label for="token" id="apiKeyLabel">API Key:</label>
+            <label for="token" id="apiKeyLabel">API 密钥:</label>
             <input type="text" id="token" name="token" placeholder="输入 API 密钥" required>
 
-            <label id="capabilitiesLabel">Capabilities:</label>
+            <label id="capabilitiesLabel">功能:</label>
             <div class="checkbox-group">
                 <div>
                     <input type="checkbox" name="capabilities" value="visual" id="visual">
-                    <label for="visual" id="visualLabel">Visual</label>
+                    <label for="visual" id="visualLabel">视觉</label>
                 </div>
                 <div>
                     <input type="checkbox" name="capabilities" value="tool" id="tool">
-                    <label for="tool" id="toolLabel">Tool</label>
+                    <label for="tool" id="toolLabel">工具</label>
                 </div>
             </div>
 
-            <label for="comment" id="commentLabel">Comment:</label>
+            <label for="comment" id="commentLabel">备注:</label>
             <textarea id="comment" name="comment" rows="3" placeholder="可留空"></textarea>
 
-            <label for="context" id="contextLabel">Context Length:</label>
+            <label for="context" id="contextLabel">上下文长度:</label>
             <select id="context" name="context">
                 <option value="4000">4000</option>
                 <option value="8000">8000</option>
