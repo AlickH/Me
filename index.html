@@ -1,329 +1,1381 @@
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <meta name="format-detection" content="telephone=no, email=no" />
-    <title>まゆずみ - 我见青山多妩媚，料青山见我应如是。</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
-    <link rel="manifest" href="/manifest.json">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#618F9E">
-    <meta name="theme-color" content="#618F9E">
-    <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Alick Huang</title>
+  <meta name="description" content="Alick Huang, an ordinary person.">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#111111">
+  <meta name="theme-color" id="themeColorMeta" content="#f3f0e8">
+  <script>
+    const savedSiteTheme = window.sessionStorage.getItem("siteTheme");
+    if (savedSiteTheme) {
+      document.documentElement.dataset.theme = savedSiteTheme;
+    }
+  </script>
+  <link rel="stylesheet" href="style.css">
 </head>
-
-
-<body onselectstart="return false">
-<script>
-    var myAudio = new Audio('bubble.mp3');
-    
-    function showText(id, delay) {
-        var elem = document.getElementById(id);
-        setTimeout(function() {
-            elem.style.visibility = 'visible';
-        }, delay)
-    }
-
-    function hideText(id, delay) {
-        var elem = document.getElementById(id);
-        setTimeout(function() {
-            myAudio.play();
-            elem.style.visibility = 'hidden';
-        }, delay)
-    }
-
-    function printText(info, id, delay) {
-        var str = info,
-            i = 0,
-            isTag,
-            text;
-        setTimeout(function type() {
-            text = str.slice(0, ++i);
-            if (text === str) return;
-            document.getElementById(id).innerHTML = text;
-            var char = text.slice(-1);
-            if (char === '< isTag = true');
-            if (char === '> isTag = false');
-            if (isTag) return type();
-            setTimeout(type, 100);
-        }, delay);
-    };
-
-window.onload = function(){en()}
-    
-function en() {
-        showText('about1', 500);
-        showText('cursor1', 500);
-        printText('cat INFORMATION ', 'element1', 1000);
-        hideText('cursor1', 3000);
-        showText('info', 3100);
-        showText('about2', 3200);
-        showText('cursor2', 3200);
-        printText('cat EXPERIENCE ', 'element2', 3700);
-        hideText('cursor2', 5700);
-        showText('expe', 5800);
-        showText('about3', 5900);
-        showText('cursor3', 5900);
-        printText('cat PROJECT ', 'element3', 6400);
-        hideText('cursor3', 8400);
-        showText('proj', 8500);
-        showText('about4', 8600);
-        showText('cursor4', 9200);
-        printText('cat EDUCATION ', 'element4', 9100);
-        hideText('cursor4', 11200);
-        showText('educ', 11200);
-        showText('about5', 11300);
-        showText('cursor5', 11800);
-        document.getElementById("tag3").innerHTML = '# name';
-        document.getElementById("tag4").innerHTML = 'Alick Huang';
-        document.getElementById("tag5").innerHTML = '# email';
-        document.getElementById("tag6").innerHTML = 'minamike2007@gmail.com';
-        document.getElementById("tag9").innerHTML = '# linkedin';
-        document.getElementById("tag10").innerHTML = '@ alick-huang';
-        document.getElementById("tag11").innerHTML = '# github';
-        document.getElementById("tag12").innerHTML = '@ AlickH';
-        document.getElementById("tag15").innerHTML = '# deviantart';
-        document.getElementById("tag16").innerHTML = '@ minamike2007';
-        document.getElementById("tag18").innerHTML = '# now';
-        document.getElementById("tag19").innerHTML = 'QA / QC Engineer — HuaDong Building CO. LTD of CSCEC 5th';
-        document.getElementById("tag20").innerHTML = '# 2016';
-        document.getElementById("tag21").innerHTML = 'Construction Crew — Zhenjiang Guangda Construction Company';
-        document.getElementById("tag22").innerHTML = '# 2015';
-        document.getElementById("tag23").innerHTML = 'Surveyor — Suzhou Branch of Jiangxi Prospecting and Design Institute';
-        document.getElementById("tag24").innerHTML = '# 2014';
-        document.getElementById("tag25").innerHTML = 'Document Keeper — The Third Construction CO. LTD of CSCEC 8th';
-        document.getElementById("tag26").innerHTML = '# 2011';
-        document.getElementById("tag27").innerHTML = 'Construction Crew — SEPCOIII Shandong Electric Power Construction Corp.';
-        document.getElementById("tag29").innerHTML = '# 2018';
-        document.getElementById("tag30").innerHTML = 'Nanjing Qiaoling Street Centeral City Zone Indemnificatory Apartment Construction Project';
-        document.getElementById("tag31").innerHTML = '# 2018';
-        document.getElementById("tag32").innerHTML = 'Lishui Development Zone Comprehensive Infrastructure PPP Project';
-        document.getElementById("tag33").innerHTML = '# 2017';
-        document.getElementById("tag34").innerHTML = '6x3000 Ton Silo Construction Project';
-        document.getElementById("tag35").innerHTML = '# 2015';
-        document.getElementById("tag36").innerHTML = 'Changzhou Metro Line NO.1 Construction Project';
-        document.getElementById("tag37").innerHTML = '# 2014';
-        document.getElementById("tag38").innerHTML = 'Wuxi Wanda Cultural Tourism City Project';
-        document.getElementById("tag39").innerHTML = '# 2011';
-        document.getElementById("tag40").innerHTML = 'Expansion Project of Kuqa Power Generation Co. LTD of SGCC';
-        document.getElementById("tag42").innerHTML = '# 2007';
-        document.getElementById("tag43").innerHTML = 'Civil Engineering — JiangSu University';
-        };
-        
-function cn() {
-        showText('about1', 500);
-        showText('cursor1', 500);
-        printText('cat 个人信息 ', 'element1', 1000);
-        hideText('cursor1', 3000);
-        showText('info', 3100);
-        showText('about2', 3200);
-        showText('cursor2', 3200);
-        printText('cat 工作经历 ', 'element2', 3700);
-        hideText('cursor2', 5700);
-        showText('expe', 5800);
-        showText('about3', 5900);
-        showText('cursor3', 5900);
-        printText('cat 项目经验 ', 'element3', 6400);
-        hideText('cursor3', 8400);
-        showText('proj', 8500);
-        showText('about4', 8600);
-        showText('cursor4', 9200);
-        printText('cat 教育程度 ', 'element4', 9100);
-        hideText('cursor4', 11200);
-        showText('educ', 11200);
-        showText('about5', 11300);
-        showText('cursor5', 11800);
-        document.getElementById("tag3").innerHTML = '# 姓名';
-        document.getElementById("tag4").innerHTML = '黄宁';
-        document.getElementById("tag5").innerHTML = '# 电子邮箱';
-        document.getElementById("tag6").innerHTML = 'minamike2007@gmail.com';
-        document.getElementById("tag9").innerHTML = '# 领英';
-        document.getElementById("tag10").innerHTML = '@ alick-huang';
-        document.getElementById("tag11").innerHTML = '# github';
-        document.getElementById("tag12").innerHTML = '@ AlickH';
-        document.getElementById("tag15").innerHTML = '# deviantart';
-        document.getElementById("tag16").innerHTML = '@ minamike2007';
-        document.getElementById("tag18").innerHTML = '# 现在';
-        document.getElementById("tag19").innerHTML = '质量工程师 - 中建五局华东建设江苏分公司';
-        document.getElementById("tag20").innerHTML = '# 2016';
-        document.getElementById("tag21").innerHTML = '施工员 - 镇江市光大建筑工程有限公司';
-        document.getElementById("tag22").innerHTML = '# 2015';
-        document.getElementById("tag23").innerHTML = '监测员 - 江西省勘察设计研究院苏州分院';
-        document.getElementById("tag24").innerHTML = '# 2014';
-        document.getElementById("tag25").innerHTML = '资料员 - 中建八局第三建设有限公司';
-        document.getElementById("tag26").innerHTML = '# 2011';
-        document.getElementById("tag27").innerHTML = '施工员 - 山东电力建设第三工程公司';
-        document.getElementById("tag29").innerHTML = '# 2018';
-        document.getElementById("tag30").innerHTML = '南京桥林街道中心城区保障房项目';
-        document.getElementById("tag31").innerHTML = '# 2018';
-        document.getElementById("tag32").innerHTML = '溧水开发区综合基础设施PPP项目';
-        document.getElementById("tag33").innerHTML = '# 2017';
-        document.getElementById("tag34").innerHTML = '益海(泰州)粮油工业有限公司6*3000吨粕库筒仓项目工程';
-        document.getElementById("tag35").innerHTML = '# 2015';
-        document.getElementById("tag36").innerHTML = '常州地铁一号线建设工程';
-        document.getElementById("tag37").innerHTML = '# 2014';
-        document.getElementById("tag38").innerHTML = '无锡万达文化旅游城建设工程';
-        document.getElementById("tag39").innerHTML = '# 2011';
-        document.getElementById("tag40").innerHTML = '国电库车发电有限公司二期(2×330MW)扩建工程';
-        document.getElementById("tag42").innerHTML = '# 2007';
-        document.getElementById("tag43").innerHTML = '土木工程 - 江苏大学';
-    };
-</script> 
-    <div id="container"></div> 
-    <div class="lang"> 
-     <l onclick="en()">
-        English
-     </l> 
-     <l>
-        |
-     </l> 
-     <l onclick="cn()">
-        简体中文
-     </l> 
-    </div> 
-     <div id="all" class="borderpart">
-            <div class="titlebar">
-                <div class="trafficlightred">
-                </div>
-                <div class="trafficlightyellow">
-                </div>
-                <div class="trafficlightgreen">
-                </div>
-            </div>
-            <script>
-                var width = document.body.clientWidth
-            </script>
-            <script>
-                <!--
-                if (width < 1100) {
-                    document.write(unescape('%3C') + '!-' + '-')
-                }
-                //-->
-            </script>
-            <div id="border" class="bodypart">
-                <script>
-                    <!--
-                    if (width < 1100) {
-                        document.write('-' + '-' + unescape('%3E'))
-                    }
-                    //-->
-                </script>
-        <b id="about1" style="visibility:hidden">about-me:~ Alick$ </b>
-        <d id="element1" style="visibility:visible"></d>
-        <span id="cursor1" class="typed-cursor" style="visibility:hidden">_</span>
-        <ul id="info" style="visibility:hidden">
-         <li class="profile name">
-            <c id="tag3"></c>
-            <d id="tag4"></d>
-        </li>
-         <li class="profile email"><a href="mailto:minamike2007@gmail.com" target="_blank">
-             <c id="tag5"></c>
-            <span id="tag6" class="link"></span>
-            </a>
-            </li> 
-         <li class="profile linkedin"><a href="https://www.linkedin.com/in/alickh/" target="_blank">
-             <c id="tag9"></c>
-            <span id="tag10" class="link"></span>
-            </a>
-            </li> 
-         <li class="profile github"><a href="https://github.com/AlickH" target="_blank">
-             <c id="tag11"></c>
-            <span id="tag12" class="link"></span>
-            </a>
-            </li> 
-         <li class="profile deviantart"><a href="http://minamike2007.deviantart.com" target="_blank">
-             <c id="tag15"></c>
-            <span id="tag16" class="link"></span>
-            </a>
-            </li>
-        </ul> 
-        <b id="about2" style="visibility:hidden">about-me:~ Alick$ </b>
-        <d id="element2" style="visibility:visible"></d>
-        <span id="cursor2" class="typed-cursor" style="visibility:hidden">_</span>
-        <ul id="expe" style="visibility:hidden">
-         <li class="profile now"><a href="http://www.cscec5bhdgs.com/index.html" target="_blank">
-             <c id="tag18"></c>
-            <span id="tag19" class="link"></span>
-            </a>
-            </li>
-         <li class="profile 2016"><a href="http://www.zjgdjz.com" target="_blank">
-             <c id="tag20"></c>
-            <span id="tag21" class="link"></span>
-            </a>
-            </li>
-         <li class="profile 2015"><a href="http://www.jxkcy.com" target="_blank">
-             <c id="tag22"></c>
-            <span id="tag23" class="link"></span>
-            </a>
-            </li>
-         <li class="profile 2014"><a href="http://www.cscec83.com" target="_blank">
-             <c id="tag24"></c>
-            <span id="tag25" class="link"></span>
-            </a>
-            </li>
-         <li class="profile 2011"><a href="http://www.sepco3.com" target="_blank">
-             <c id="tag26"></c>
-            <span id="tag27" class="link"></span>
-            </a>
-            </li>
-        </ul> 
-        <b id="about3" style="visibility:hidden">about-me:~ Alick$ </b>
-        <d id="element3" style="visibility:visible"></d>
-        <span id="cursor3" class="typed-cursor" style="visibility:hidden">_</span>
-        <ul id="proj" style="visibility:hidden">
-         <li class="profile 2018-2"><a href="https://web10.bgy.com.cn/china/project/newsdetail.aspx?NodeCode=105002003&amp;ID=100012708958662" target="_blank">
-             <c id="tag29"></c>
-            <span id="tag30" class="link"></span>
-            </a>
-            </li>
-         <li class="profile 2018"><a href="http://www.cscec5bhdgs.com/html/news/gongsixinwen/2017/0807/10665.html" target="_blank">
-             <c id="tag31"></c>
-            <span id="tag32" class="link"></span>
-            </a>
-            </li>
-         <li class="profile 2017"><a href="null" target="_blank">
-             <c id="tag33"></c>
-            <span id="tag34" class="link"></span>
-            </a>
-            </li>
-         <li class="profile 2015"><a href="http://www.czmetro.net.cn/Html/index.html" target="_blank">
-             <c id="tag35"></c>
-            <span id="tag36" class="link"></span>
-            </a>
-            </li>
-         <li class="profile 2014"><a href="http://www.wanda-cti.com/project/wuxi/" target="_blank">
-             <c id="tag37"></c>
-            <span id="tag38" class="link"></span>
-            </a>
-            </li>
-         <li class="profile 2011"><a href="http://www.gdxjkc.com" target="_blank">
-             <c id="tag39"></c>
-            <span id="tag40" class="link"></span>
-            </a>
-            </li>
-        </ul> 
-        <b id="about4" style="visibility:hidden">about-me:~ Alick$ </b>
-        <d id="element4" style="visibility:visible"></d>
-        <span id="cursor4" class="typed-cursor" style="visibility:hidden">_</span>
-        <ul id="educ" style="visibility:hidden">
-         <li class="profile 2007"><a href="http://www.ujs.edu.cn/site1/" target="_blank">
-             <c id="tag42"></c>
-            <span id="tag43" class="link"></span>
-            </a>
-            </li>
-        </ul>
-        <b id="about5" style="visibility:hidden">about-me:~ Alick$ </b>
-        <d id="element5" style="visibility:visible"></d>
-        <span id="cursor5" class="typed-cursor" style="visibility:hidden">_</span>
-        <br /> 
-     </div> 
+<body class="single-page">
+  <main class="home-layer" id="homeLayer">
+    <div class="home-hitbox" id="openDetailArea" role="button" tabindex="0" aria-label="Open profile details">
+      <div class="hero-copy">
+        <p class="hero-line">
+          <span id="typedStream"></span><span class="cursor-slot" id="cursorSlot" aria-hidden="true"></span><span class="cursor" id="cursor" aria-hidden="true"></span><span class="dot-point" id="dotPoint1" aria-hidden="true"></span><span class="dot-point" id="dotPoint2" aria-hidden="true"></span><span class="dot-tail" id="dotTail" aria-hidden="true"></span><span class="dot-actor" id="dotActor" aria-hidden="true"></span><span class="typed-char ghost-dot pending" id="finalDot">.</span>
+        </p>
+        <p class="hero-line hero-line-measure" id="measureLine" aria-hidden="true"><span id="measureStart">A</span><span id="measureLead"></span><span id="measureDot1">.</span><span id="measureDot2">.</span><span id="measureDot3">.</span></p>
+        <button class="circle-arrow home-arrow" id="openDetailArrow" type="button" aria-label="Open profile details"></button>
+      </div>
     </div>
- </body>
-</html>
+  </main>
 
+  <section class="detail-layer" id="detailLayer" aria-hidden="true">
+    <div class="detail-shell">
+      <header class="detail-header">
+        <div class="detail-header-left">
+          <button class="contact-trigger contact-more" id="contactMore" type="button" aria-label="Show contact links" aria-expanded="false">…</button>
+          <div class="contact-icons" aria-label="Contact links">
+            <a class="contact-trigger" href="mailto:minamike2007@gmail.com" aria-label="Email">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 6.5h17v11h-17z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M4.5 7.5 12 13l7.5-5.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a class="contact-trigger" href="https://www.linkedin.com/in/alickh/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 9.5v7M7 7.2a1.2 1.2 0 1 1 0-2.4 1.2 1.2 0 0 1 0 2.4ZM11 9.5v7m0-4.2c0-1.7 1.1-2.8 2.7-2.8 1.6 0 2.3 1 2.3 2.8v4.2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a class="contact-trigger" href="https://github.com/AlickH" target="_blank" rel="noreferrer" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.2 18.2c-3.8 1.1-3.8-2.1-5.3-2.6m10.6 5.2v-2.7c0-.8.1-1.4-.4-2 2.2-.2 4.5-1.1 4.5-5a4 4 0 0 0-1.1-2.8 3.7 3.7 0 0 0-.1-2.8s-.9-.3-2.9 1.1a10.2 10.2 0 0 0-5.3 0C7.2 5.2 6.3 5.5 6.3 5.5a3.7 3.7 0 0 0-.1 2.8 4 4 0 0 0-1.1 2.8c0 3.9 2.3 4.8 4.5 5-.5.6-.5 1.3-.5 2v2.7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a class="contact-trigger" href="https://x.com/minamike1989" target="_blank" rel="noreferrer" aria-label="X">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h3.6l4.1 5.3L17.2 5H19l-5.5 6.3L19 19h-3.6l-4.4-5.8L6 19H4.2l5.9-6.8z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a class="contact-trigger" href="http://minamike2007.deviantart.com" target="_blank" rel="noreferrer" aria-label="DeviantArt">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.4 5 12 7.8H8.8L7.2 11h3.2l-1.8 3.7H5.7L4 18h5.6l1.6-3.3h3.1l1.7-3.2H13l1.8-3.7h2.9L19.4 5z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+        <button class="circle-arrow detail-arrow" id="closeDetailArrow" type="button" aria-label="Close profile details"></button>
+        <div class="detail-actions">
+          <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode"></button>
+          <div class="language-toggle" id="languageToggle" role="group" aria-label="Language switcher" data-active="en">
+            <span class="language-highlight" aria-hidden="true"></span>
+            <button class="language-option active" id="langEn" type="button"><span class="language-label language-label-en">EN</span></button>
+            <button class="language-option" id="langZh" type="button"><span class="language-label language-label-zh">中文</span></button>
+          </div>
+        </div>
+      </header>
+
+      <div class="detail-content" id="detailContent" lang="en">
+        <section class="detail-intro">
+          <p class="detail-kicker" id="detailKicker">Alick Huang</p>
+          <h1 id="detailIntroTitle">Just accidentally visiting the world.</h1>
+        </section>
+        <div id="detailSections"></div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const els = {
+      typedStream: document.getElementById("typedStream"),
+      measureLine: document.getElementById("measureLine"),
+      measureStart: document.getElementById("measureStart"),
+      measureLead: document.getElementById("measureLead"),
+      measureDot1: document.getElementById("measureDot1"),
+      cursorSlot: document.getElementById("cursorSlot"),
+      cursor: document.getElementById("cursor"),
+      dotPoint1: document.getElementById("dotPoint1"),
+      dotPoint2: document.getElementById("dotPoint2"),
+      dotTail: document.getElementById("dotTail"),
+      dotActor: document.getElementById("dotActor"),
+      finalDot: document.getElementById("finalDot"),
+      openDetailArea: document.getElementById("openDetailArea"),
+      openDetailArrow: document.getElementById("openDetailArrow"),
+      closeDetailArrow: document.getElementById("closeDetailArrow"),
+      detailLayer: document.getElementById("detailLayer"),
+      detailShell: document.querySelector(".detail-shell"),
+      detailContent: document.getElementById("detailContent"),
+      detailSections: document.getElementById("detailSections"),
+      detailKicker: document.getElementById("detailKicker"),
+      detailIntroTitle: document.getElementById("detailIntroTitle"),
+      heroLine: document.querySelector(".hero-line"),
+      heroCopy: document.querySelector(".hero-copy"),
+      contactMore: document.getElementById("contactMore"),
+      contactIcons: document.querySelector(".contact-icons"),
+      languageToggle: document.getElementById("languageToggle"),
+      themeToggle: document.getElementById("themeToggle"),
+      themeColorMeta: document.getElementById("themeColorMeta"),
+      langEn: document.getElementById("langEn"),
+      langZh: document.getElementById("langZh")
+    };
+
+    const HERO_TEXT = {
+      desktop: "Alick, an ordinary person",
+      mobile: "Alick,\nan ordinary person"
+    };
+
+    const HERO_TIMING = {
+      blinkDuration: 860,
+      settleDelay: 260,
+      postDotBlinkDuration: 420,
+      postDotPause: 280,
+      cursorTopplePause: 320,
+      cursorToppleDuration: 980,
+      cursorCurlDuration: 980,
+      firstBounceDuration: 1170,
+      secondBounceDuration: 1050,
+      introDelay: 140
+    };
+
+    const detailContentByLanguage = {
+      en: {
+        kicker: "Alick Huang",
+        introTitle: "Just accidentally visiting the world.",
+        sections: [
+          {
+            id: "experience",
+            label: "Experience",
+            items: [
+              { year: "Now", title: "Project Technical Supervisor", body: "HuaDong Building Co. Ltd of CSCEC 5th" },
+              { year: "2019", title: "Project Technician", body: "HuaDong Building Co. Ltd of CSCEC 5th" },
+              { year: "2018", title: "QA / QC Engineer", body: "HuaDong Building Co. Ltd of CSCEC 5th" },
+              { year: "2016", title: "Construction Crew", body: "Zhenjiang Guangda Construction Company" },
+              { year: "2015", title: "Surveyor", body: "Suzhou Branch of Jiangxi Prospecting and Design Institute" },
+              { year: "2014", title: "Document Keeper", body: "The Third Construction Co. Ltd of CSCEC 8th" },
+              { year: "2011", title: "Construction Crew", body: "SEPCOIII Shandong Electric Power Construction Corp." }
+            ]
+          },
+          {
+            id: "projects",
+            label: "Projects",
+            items: [
+              { year: "2025", title: "Linshan Yayuan Phase IV Indemnificatory Housing Project" },
+              { year: "2022", title: "Nanjing Intelligent Manufacturing Industrial Park Zhongshan Lake Independent Innovation International Community EPC Project" },
+              { year: "2018", title: "Nanjing Qiaoling Street Central City Zone Indemnificatory Apartment Construction Project" },
+              { year: "2018", title: "Lishui Development Zone Comprehensive Infrastructure PPP Project" },
+              { year: "2017", title: "6×3000 Ton Silo Construction Project" },
+              { year: "2015", title: "Changzhou Metro Line 1 Construction Project" },
+              { year: "2014", title: "Wuxi Wanda Cultural Tourism City Project" },
+              { year: "2011", title: "Expansion Project of Kuqa Power Generation Co. Ltd of SGCC" }
+            ]
+          },
+          {
+            id: "education",
+            label: "Education",
+            items: [
+              { year: "2007", title: "Civil Engineering", body: "Jiangsu University" }
+            ]
+          }
+        ]
+      },
+      zh: {
+        kicker: "Alick Huang",
+        introTitle: "只是偶然来了一趟世间",
+        sections: [
+          {
+            id: "experience",
+            label: "工作经历",
+            items: [
+              { year: "现在", title: "项目技术主管", body: "中建五局华东建设江苏分公司" },
+              { year: "2019", title: "项目技术员", body: "中建五局华东建设江苏分公司" },
+              { year: "2018", title: "质量工程师", body: "中建五局华东建设江苏分公司" },
+              { year: "2016", title: "施工员", body: "镇江市光大建筑工程有限公司" },
+              { year: "2015", title: "监测员", body: "江西省勘察设计研究院苏州分院" },
+              { year: "2014", title: "资料员", body: "中建八局第三建设有限公司" },
+              { year: "2011", title: "施工员", body: "山东电力建设第三工程公司" }
+            ]
+          },
+          {
+            id: "projects",
+            label: "项目经验",
+            items: [
+              { year: "2025", title: "林山雅苑四期保障性住房项目" },
+              { year: "2022", title: "南京智能制造产业园中山湖自主创新国际社区工程总承包项目" },
+              { year: "2018", title: "南京桥林街道中心城区保障房项目" },
+              { year: "2018", title: "溧水开发区综合基础设施PPP项目" },
+              { year: "2017", title: "益海(泰州)粮油工业有限公司6×3000吨粕库筒仓项目工程" },
+              { year: "2015", title: "常州地铁一号线建设工程" },
+              { year: "2014", title: "无锡万达文化旅游城建设工程" },
+              { year: "2011", title: "国电库车发电有限公司二期(2×330MW)扩建工程" }
+            ]
+          },
+          {
+            id: "education",
+            label: "教育经历",
+            items: [
+              { year: "2007", title: "土木工程", body: "江苏大学" }
+            ]
+          }
+        ]
+      }
+    };
+
+    const themeMedia = window.matchMedia("(prefers-color-scheme: dark)");
+    const compactContactMedia = window.matchMedia("(max-width: 820px) and (hover: none) and (pointer: coarse)");
+
+    const siteState = {
+      detailLanguage: window.localStorage.getItem("detailLanguage") || "en",
+      siteTheme: savedSiteTheme || ""
+    };
+
+    const heroState = {
+      streamNodes: [],
+      sequenceId: 0,
+      animationComplete: false,
+      settled: false,
+      visibleDotCount: 0,
+      textNodeCount: 0
+    };
+
+    const detailState = {
+      returnFocus: null,
+      openedAt: 0,
+      motion: null,
+      heroMotion: null
+    };
+
+    function currentDetailContent() {
+      return detailContentByLanguage[siteState.detailLanguage];
+    }
+
+    function createTimelineItem(item) {
+      const article = document.createElement("article");
+      article.className = "timeline-item";
+
+      const year = document.createElement("p");
+      year.className = "timeline-year";
+      year.textContent = item.year;
+      article.appendChild(year);
+
+      const copy = document.createElement("div");
+      copy.className = "timeline-copy";
+
+      const title = document.createElement("h2");
+      title.textContent = item.title;
+      copy.appendChild(title);
+
+      if (item.body) {
+        const body = document.createElement("p");
+        body.textContent = item.body;
+        copy.appendChild(body);
+      }
+
+      article.appendChild(copy);
+      return article;
+    }
+
+    function renderDetailSections() {
+      const content = currentDetailContent();
+      const fragment = document.createDocumentFragment();
+
+      els.detailKicker.textContent = content.kicker;
+      els.detailIntroTitle.textContent = content.introTitle;
+
+      for (const sectionData of content.sections) {
+        const section = document.createElement("section");
+        section.className = "detail-section";
+        section.id = sectionData.id;
+
+        const label = document.createElement("p");
+        label.className = "section-label";
+        label.textContent = sectionData.label;
+        section.appendChild(label);
+
+        const timeline = document.createElement("div");
+        timeline.className = "timeline";
+
+        for (const item of sectionData.items) {
+          timeline.appendChild(createTimelineItem(item));
+        }
+
+        section.appendChild(timeline);
+        fragment.appendChild(section);
+      }
+
+      els.detailSections.replaceChildren(fragment);
+    }
+
+    function syncLanguageControls() {
+      const language = siteState.detailLanguage;
+      els.langEn.classList.toggle("active", language === "en");
+      els.langZh.classList.toggle("active", language === "zh");
+      els.langEn.setAttribute("aria-pressed", language === "en" ? "true" : "false");
+      els.langZh.setAttribute("aria-pressed", language === "zh" ? "true" : "false");
+      els.languageToggle.dataset.active = language;
+      els.languageToggle.setAttribute("aria-label", language === "en" ? "Switch language to Chinese" : "切换到英文");
+    }
+
+    function applyDetailLanguage(language) {
+      siteState.detailLanguage = language;
+      els.detailContent.setAttribute("lang", language);
+      window.localStorage.setItem("detailLanguage", language);
+      renderDetailSections();
+      syncLanguageControls();
+      fitIntroTitle();
+    }
+
+    function chooseDetailLanguage(language, event) {
+      event.stopPropagation();
+      if (siteState.detailLanguage === language) {
+        return;
+      }
+      applyDetailLanguage(language);
+    }
+
+    function fitIntroTitle() {
+      if (window.innerWidth <= 820) {
+        els.detailIntroTitle.style.removeProperty("--intro-fit-size");
+        return;
+      }
+
+      els.detailIntroTitle.style.removeProperty("--intro-fit-size");
+      const style = window.getComputedStyle(els.detailIntroTitle);
+      const maxSize = parseFloat(style.fontSize);
+      const minSize = parseFloat(siteState.detailLanguage === "zh" ? "29.6" : "32");
+      const availableWidth = els.detailIntroTitle.parentElement.clientWidth;
+
+      let low = minSize;
+      let high = maxSize;
+      for (let index = 0; index < 12; index += 1) {
+        const mid = (low + high) / 2;
+        els.detailIntroTitle.style.setProperty("--intro-fit-size", `${mid}px`);
+        if (els.detailIntroTitle.scrollWidth <= availableWidth) {
+          low = mid;
+        } else {
+          high = mid;
+        }
+      }
+
+      els.detailIntroTitle.style.setProperty("--intro-fit-size", `${low}px`);
+    }
+
+    function resolvedTheme() {
+      return siteState.siteTheme || (themeMedia.matches ? "dark" : "light");
+    }
+
+    function applySiteTheme(theme) {
+      siteState.siteTheme = theme;
+      if (theme) {
+        document.documentElement.dataset.theme = theme;
+        window.sessionStorage.setItem("siteTheme", theme);
+      } else {
+        delete document.documentElement.dataset.theme;
+        window.sessionStorage.removeItem("siteTheme");
+      }
+
+      const activeTheme = resolvedTheme();
+      els.themeToggle.dataset.icon = activeTheme === "dark" ? "sun" : "moon";
+      els.themeToggle.setAttribute("aria-label", activeTheme === "dark" ? "Switch to light mode" : "Switch to dark mode");
+      els.themeColorMeta.setAttribute("content", activeTheme === "dark" ? "#000000" : "#f3f0e8");
+    }
+
+    function themeTransitionGeometry(trigger) {
+      const rect = trigger ? trigger.getBoundingClientRect() : {
+        left: window.innerWidth / 2,
+        top: window.innerHeight / 2,
+        width: 0,
+        height: 0
+      };
+      const x = rect.left + rect.width / 2;
+      const y = rect.top + rect.height / 2;
+      const radius = Math.hypot(
+        Math.max(x, window.innerWidth - x),
+        Math.max(y, window.innerHeight - y)
+      );
+
+      document.documentElement.style.setProperty("--theme-transition-x", `${x}px`);
+      document.documentElement.style.setProperty("--theme-transition-y", `${y}px`);
+      document.documentElement.style.setProperty("--theme-transition-radius", `${radius}px`);
+    }
+
+    async function switchSiteTheme(nextTheme, trigger) {
+      themeTransitionGeometry(trigger);
+
+      if (!document.startViewTransition || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        applySiteTheme(nextTheme);
+        return;
+      }
+
+      const transition = document.startViewTransition(function () {
+        applySiteTheme(nextTheme);
+      });
+      await transition.finished;
+    }
+
+    async function toggleSiteTheme(event) {
+      event.stopPropagation();
+      await switchSiteTheme(resolvedTheme() === "dark" ? "light" : "dark", event.currentTarget);
+    }
+
+    function setContactExpanded(expanded) {
+      els.contactIcons.classList.toggle("expanded", expanded);
+      els.contactMore.setAttribute("aria-expanded", expanded ? "true" : "false");
+    }
+
+    function syncResponsiveControls() {
+      fitIntroTitle();
+      if (!compactContactMedia.matches) {
+        setContactExpanded(true);
+        return;
+      }
+
+      if (!document.body.classList.contains("detail-open")) {
+        setContactExpanded(false);
+      }
+    }
+
+    function currentText() {
+      return window.innerWidth <= 640 ? HERO_TEXT.mobile : HERO_TEXT.desktop;
+    }
+
+    function syncMeasureLine() {
+      const lines = currentText().split("\n");
+      els.measureStart.textContent = lines[0] || "A";
+      els.measureLead.innerHTML = lines.length > 1
+        ? `<br>${lines.slice(1).join("\n").replace(/\n/g, "<br>")}`
+        : "";
+    }
+
+    function buildTypingNodes() {
+      const nodes = [];
+      els.typedStream.replaceChildren();
+
+      for (const char of currentText()) {
+        let node;
+
+        if (char === "\n") {
+          node = document.createElement("br");
+        } else {
+          node = document.createElement("span");
+          node.className = "typed-char";
+          node.textContent = char === " " ? "\u00a0" : char;
+        }
+
+        node.classList.add("pending");
+        els.typedStream.appendChild(node);
+        nodes.push(node);
+      }
+
+      heroState.textNodeCount = nodes.length;
+
+      for (let index = 0; index < 2; index += 1) {
+        const dot = document.createElement("span");
+        dot.className = "typed-char ghost-dot pending";
+        dot.textContent = ".";
+        els.typedStream.appendChild(dot);
+        nodes.push(dot);
+      }
+
+      els.finalDot.className = "typed-char ghost-dot pending";
+      els.finalDot.textContent = ".";
+      heroState.streamNodes = nodes;
+    }
+
+    function revealNode(node) {
+      node.classList.remove("pending");
+    }
+
+    function clearText() {
+      buildTypingNodes();
+      syncMeasureLine();
+      hideCursor();
+      heroState.visibleDotCount = 0;
+      els.finalDot.classList.add("pending");
+      els.dotPoint1.classList.remove("visible");
+      els.dotPoint1.removeAttribute("style");
+      els.dotPoint2.classList.remove("visible");
+      els.dotPoint2.removeAttribute("style");
+      els.dotTail.classList.remove("visible");
+      els.dotTail.removeAttribute("style");
+      els.dotActor.classList.remove("visible");
+      els.dotActor.removeAttribute("style");
+      els.openDetailArrow.classList.remove("visible");
+      syncCursorGeometry();
+    }
+
+    function showCursor() {
+      syncCursorGeometry();
+      els.cursor.classList.add("visible");
+    }
+
+    function hideCursor() {
+      els.cursor.classList.remove("visible");
+    }
+
+    function sleep(ms) {
+      return new Promise(function (resolve) {
+        window.setTimeout(resolve, ms);
+      });
+    }
+
+    function nextFrame() {
+      return new Promise(function (resolve) {
+        window.requestAnimationFrame(function () {
+          resolve();
+        });
+      });
+    }
+
+    function easeOutCubic(value) {
+      return 1 - Math.pow(1 - value, 3);
+    }
+
+    function easeInCubic(value) {
+      return value * value * value;
+    }
+
+    function easeOutQuad(value) {
+      return 1 - (1 - value) * (1 - value);
+    }
+
+    function lerp(start, end, progress) {
+      return start + (end - start) * progress;
+    }
+
+    function animateProgress(duration, draw, easing) {
+      return new Promise(function (resolve) {
+        const start = performance.now();
+
+        function step(now) {
+          const raw = Math.min((now - start) / duration, 1);
+          const progress = easing ? easing(raw) : raw;
+          draw(progress, raw);
+
+          if (raw < 1) {
+            window.requestAnimationFrame(step);
+            return;
+          }
+
+          resolve();
+        }
+
+        window.requestAnimationFrame(step);
+      });
+    }
+
+    async function blinkCursor(times, keepVisible, duration) {
+      const activeDuration = duration || HERO_TIMING.blinkDuration;
+
+      for (let count = 0; count < times; count += 1) {
+        showCursor();
+        await sleep(activeDuration / 2);
+        hideCursor();
+        await sleep(activeDuration / 2);
+      }
+
+      if (keepVisible) {
+        showCursor();
+      }
+    }
+
+    function lineRect() {
+      return {
+        left: 0,
+        top: 0,
+        width: els.heroLine.clientWidth,
+        height: els.heroLine.clientHeight
+      };
+    }
+
+    function localBox(element) {
+      const left = element.offsetLeft;
+      const top = element.offsetTop;
+      const width = element.offsetWidth;
+      const height = element.offsetHeight;
+      return {
+        left,
+        top,
+        width,
+        height,
+        right: left + width,
+        bottom: top + height
+      };
+    }
+
+    function referenceRect() {
+      const visibleChars = els.typedStream.querySelectorAll(".typed-char:not(.pending)");
+      if (visibleChars.length > 0) {
+        return localBox(visibleChars[visibleChars.length - 1]);
+      }
+
+      const lineBox = lineRect();
+      const measureBox = localBox(els.measureStart);
+      if (window.innerWidth <= 640) {
+        return {
+          right: measureBox.left,
+          top: measureBox.top,
+          height: measureBox.height
+        };
+      }
+
+      return {
+        right: lineBox.left + lineBox.width / 2,
+        top: measureBox.top,
+        height: measureBox.height
+      };
+    }
+
+    function syncCursorGeometry() {
+      const refBox = referenceRect();
+      const topExtension = 8;
+      const bottomExtension = 2;
+      els.cursor.style.left = `${refBox.right - 0.2}px`;
+      els.cursor.style.top = `${refBox.top - topExtension}px`;
+      els.cursor.style.height = `${refBox.height + topExtension + bottomExtension}px`;
+    }
+
+    function glyphMetricsForChar(char) {
+      const style = window.getComputedStyle(els.heroLine);
+      const fontSize = Number.parseFloat(style.fontSize);
+      const lineHeight = Number.parseFloat(style.lineHeight);
+      const scale = 8;
+      const padding = Math.ceil(fontSize * scale);
+      const canvas = document.createElement("canvas");
+      const context = canvas.getContext("2d");
+      const font = `${style.fontStyle} ${style.fontWeight} ${fontSize * scale}px ${style.fontFamily}`;
+      context.font = font;
+
+      const metrics = context.measureText(char);
+      const baseline = ((lineHeight * scale) - metrics.fontBoundingBoxAscent - metrics.fontBoundingBoxDescent) / 2 + metrics.fontBoundingBoxAscent;
+      canvas.width = Math.ceil(metrics.width) + padding * 2;
+      canvas.height = Math.ceil(lineHeight * scale) + padding * 2;
+
+      const paint = canvas.getContext("2d");
+      paint.fillStyle = "#000";
+      paint.font = font;
+      paint.textBaseline = "alphabetic";
+      paint.fillText(char, padding, padding + baseline);
+
+      const pixels = paint.getImageData(0, 0, canvas.width, canvas.height).data;
+      let minX = canvas.width;
+      let minY = canvas.height;
+      let maxX = -1;
+      let maxY = -1;
+
+      for (let y = 0; y < canvas.height; y += 1) {
+        for (let x = 0; x < canvas.width; x += 1) {
+          if (pixels[(y * canvas.width + x) * 4 + 3] <= 8) {
+            continue;
+          }
+
+          if (x < minX) {
+            minX = x;
+          }
+          if (y < minY) {
+            minY = y;
+          }
+          if (x > maxX) {
+            maxX = x;
+          }
+          if (y > maxY) {
+            maxY = y;
+          }
+        }
+      }
+
+      return {
+        inkTop: (minY - padding) / scale,
+        inkHeight: (maxY - minY + 1) / scale
+      };
+    }
+
+    function dotGeometry() {
+      const style = window.getComputedStyle(els.heroLine);
+      const fontSize = Number.parseFloat(style.fontSize);
+      const textGlyph = glyphMetricsForChar("n");
+      const lastTextRect = localBox(heroState.streamNodes[heroState.textNodeCount - 1]);
+      const textRect = localBox(els.measureDot1);
+      const size = fontSize * 0.12;
+      const gap = size * 0.45;
+      const mobileDotDrop = window.innerWidth <= 640 ? size * 0.18 : 0;
+      const top = textRect.top + textGlyph.inkTop + textGlyph.inkHeight - size + mobileDotDrop;
+      const centerY = top + size / 2;
+
+      const first = {
+        left: lastTextRect.right + gap,
+        top,
+        size
+      };
+      first.centerX = first.left + size / 2;
+      first.centerY = centerY;
+
+      const second = {
+        left: first.left + size + gap,
+        top,
+        size
+      };
+      second.centerX = second.left + size / 2;
+      second.centerY = centerY;
+
+      const third = {
+        left: second.left + size + gap,
+        top,
+        size
+      };
+      third.centerX = third.left + size / 2;
+      third.centerY = centerY;
+
+      return { first, second, third };
+    }
+
+    function placeDot(element, geometry) {
+      element.style.left = `${geometry.left}px`;
+      element.style.top = `${geometry.top}px`;
+      element.style.width = `${geometry.size}px`;
+      element.style.height = `${geometry.size}px`;
+    }
+
+    function positionStaticDots() {
+      const geometry = dotGeometry();
+
+      if (heroState.visibleDotCount >= 1) {
+        placeDot(els.dotPoint1, geometry.first);
+        els.dotPoint1.classList.add("visible");
+      } else {
+        els.dotPoint1.classList.remove("visible");
+        els.dotPoint1.removeAttribute("style");
+      }
+
+      if (heroState.visibleDotCount >= 2) {
+        placeDot(els.dotPoint2, geometry.second);
+        els.dotPoint2.classList.add("visible");
+      } else {
+        els.dotPoint2.classList.remove("visible");
+        els.dotPoint2.removeAttribute("style");
+      }
+
+      return geometry;
+    }
+
+    function prepareDotActor() {
+      const cursorBox = localBox(els.cursor);
+      const refBox = referenceRect();
+      const target = positionStaticDots().third;
+      const startX = cursorBox.left;
+      const startY = refBox.top;
+
+      els.dotTail.style.left = `${startX}px`;
+      els.dotTail.style.top = `${startY}px`;
+      els.dotTail.style.width = `${cursorBox.width}px`;
+      els.dotTail.style.height = `${refBox.height}px`;
+      els.dotTail.style.borderRadius = "0px";
+      els.dotTail.style.transformOrigin = "0% 100%";
+      els.dotTail.style.transform = "rotate(0deg) scale(1, 1)";
+      els.dotTail.style.opacity = "1";
+      els.dotTail.classList.add("visible");
+
+      els.dotActor.style.left = `${startX}px`;
+      els.dotActor.style.top = `${target.top}px`;
+      els.dotActor.style.width = `${target.size}px`;
+      els.dotActor.style.height = `${target.size}px`;
+      els.dotActor.style.borderRadius = `${target.size}px`;
+      els.dotActor.style.transform = "rotate(0deg) scale(0.18, 0.18)";
+      els.dotActor.style.opacity = "0";
+      els.dotActor.classList.add("visible");
+
+      return {
+        startX,
+        startY,
+        width: cursorBox.width,
+        height: refBox.height,
+        targetLeft: target.left,
+        targetTop: target.top,
+        targetCenterX: target.centerX,
+        targetCenterY: target.centerY,
+        targetSize: target.size
+      };
+    }
+
+    async function toppleCursorRight(startX, startY, width, height) {
+      const pivotX = startX;
+      const pivotY = startY + height;
+      const finalTop = startY + height - width;
+
+      els.dotTail.style.left = `${pivotX}px`;
+      els.dotTail.style.top = `${finalTop}px`;
+      els.dotTail.style.width = `${height}px`;
+      els.dotTail.style.height = `${width}px`;
+      els.dotTail.style.borderRadius = `${width}px`;
+      els.dotTail.style.transformOrigin = "0% 100%";
+      els.dotTail.style.transform = "rotate(-90deg)";
+
+      await animateProgress(HERO_TIMING.cursorToppleDuration, function (progress) {
+        let angle;
+
+        if (progress < 0.74) {
+          angle = -90 + 102 * easeInCubic(progress / 0.74);
+        } else if (progress < 0.9) {
+          angle = 12 - 18 * easeOutQuad((progress - 0.74) / 0.16);
+        } else {
+          angle = -6 + 6 * easeOutCubic((progress - 0.9) / 0.1);
+        }
+
+        els.dotTail.style.transformOrigin = "0% 100%";
+        els.dotTail.style.transform = `rotate(${angle}deg)`;
+      });
+
+      els.dotTail.style.left = `${pivotX}px`;
+      els.dotTail.style.top = `${finalTop}px`;
+      els.dotTail.style.width = `${height}px`;
+      els.dotTail.style.height = `${width}px`;
+      els.dotTail.style.borderRadius = `${width}px`;
+      els.dotTail.style.transformOrigin = "0% 50%";
+      els.dotTail.style.transform = "rotate(0deg)";
+
+      return {
+        left: pivotX,
+        right: pivotX + height,
+        top: finalTop,
+        bottom: pivotY,
+        length: height,
+        thickness: width
+      };
+    }
+
+    function lockBallToDot(left, top, size) {
+      els.dotActor.style.left = `${left}px`;
+      els.dotActor.style.top = `${top}px`;
+      els.dotActor.style.width = `${size}px`;
+      els.dotActor.style.height = `${size}px`;
+      els.dotActor.style.borderRadius = `${size}px`;
+      els.dotActor.style.opacity = "1";
+      els.dotActor.style.transform = "rotate(0deg) scale(1, 1)";
+    }
+
+    function lockActorToTarget(left, top, size) {
+      lockBallToDot(left, top, size);
+    }
+
+    async function curlTailIntoBall(fallen, targetSize) {
+      const ballStartSize = fallen.thickness;
+      const baselineY = fallen.bottom;
+      const ballLeft = fallen.left;
+
+      els.dotTail.style.left = `${fallen.left}px`;
+      els.dotTail.style.top = `${fallen.top}px`;
+      els.dotTail.style.width = `${fallen.length}px`;
+      els.dotTail.style.height = `${fallen.thickness}px`;
+      els.dotTail.style.borderRadius = `${fallen.thickness}px`;
+      els.dotTail.style.transformOrigin = "0% 50%";
+      els.dotTail.style.transform = "rotate(0deg)";
+      els.dotTail.style.opacity = "1";
+
+      els.dotActor.style.left = `${ballLeft}px`;
+      els.dotActor.style.top = `${baselineY - ballStartSize}px`;
+      els.dotActor.style.width = `${ballStartSize}px`;
+      els.dotActor.style.height = `${ballStartSize}px`;
+      els.dotActor.style.borderRadius = `${targetSize}px`;
+      els.dotActor.style.opacity = "1";
+      els.dotActor.style.transform = "rotate(0deg) scale(1, 1)";
+
+      await animateProgress(HERO_TIMING.cursorCurlDuration, function (progress) {
+        const curlProgress = easeInCubic(progress);
+        const size = ballStartSize + (targetSize - ballStartSize) * curlProgress;
+        const ballTop = baselineY - size;
+        const tangentX = ballLeft + size / 2;
+        const lineTop = baselineY - fallen.thickness;
+        const right = lerp(fallen.right, tangentX, curlProgress);
+
+        els.dotActor.style.left = `${ballLeft}px`;
+        els.dotActor.style.top = `${ballTop}px`;
+        els.dotActor.style.width = `${size}px`;
+        els.dotActor.style.height = `${size}px`;
+        els.dotActor.style.borderRadius = `${targetSize}px`;
+        els.dotActor.style.opacity = "1";
+
+        els.dotTail.style.left = `${tangentX}px`;
+        els.dotTail.style.top = `${lineTop}px`;
+        els.dotTail.style.width = `${Math.max(right - tangentX, 0)}px`;
+        els.dotTail.style.height = `${fallen.thickness}px`;
+        els.dotTail.style.opacity = "1";
+      });
+
+      lockBallToDot(fallen.left, baselineY - targetSize, targetSize);
+      els.dotTail.style.left = `${ballLeft + targetSize / 2}px`;
+      els.dotTail.style.top = `${baselineY - fallen.thickness}px`;
+      els.dotTail.style.width = "0px";
+      els.dotTail.style.height = `${fallen.thickness}px`;
+      els.dotTail.style.opacity = "1";
+      els.dotTail.style.transform = "rotate(0deg)";
+
+      return { x: fallen.left, y: baselineY - targetSize, size: targetSize };
+    }
+
+    async function squashBall(left, top, size, stretch, duration) {
+      await animateProgress(duration, function () {
+        els.dotActor.style.left = `${left - (size * stretch - size) / 2}px`;
+        els.dotActor.style.top = `${top + (size - size / stretch) / 2}px`;
+        els.dotActor.style.width = `${size * stretch}px`;
+        els.dotActor.style.height = `${size / stretch}px`;
+        els.dotActor.style.transform = "rotate(0deg) scale(1, 1)";
+      });
+    }
+
+    async function unsquashBall(left, top, size, stretch, duration) {
+      await animateProgress(duration, function (progress) {
+        const eased = easeOutCubic(progress);
+        const width = lerp(size * stretch, size, eased);
+        const height = lerp(size / stretch, size, eased);
+        els.dotActor.style.left = `${left - (width - size) / 2}px`;
+        els.dotActor.style.top = `${top + (size - height) / 2}px`;
+        els.dotActor.style.width = `${width}px`;
+        els.dotActor.style.height = `${height}px`;
+        els.dotActor.style.transform = "rotate(0deg) scale(1, 1)";
+      });
+    }
+
+    async function bounceArc(startX, startY, endX, endY, peakY, duration, size) {
+      const lift = Math.max(startY, endY) - peakY;
+
+      await animateProgress(duration, function (_, raw) {
+        const x = lerp(startX, endX, easeOutCubic(raw));
+        const y = lerp(startY, endY, raw) - 4 * lift * raw * (1 - raw);
+        els.dotActor.style.left = `${x}px`;
+        els.dotActor.style.top = `${y}px`;
+        els.dotActor.style.width = `${size}px`;
+        els.dotActor.style.height = `${size}px`;
+        els.dotActor.style.transform = "rotate(0deg) scale(1, 1)";
+      });
+    }
+
+    async function bounceBallToAnchor(startCenterX, startCenterY, size, targetCenterX, targetCenterY) {
+      const startX = startCenterX - size / 2;
+      const startY = startCenterY - size / 2;
+      const targetX = targetCenterX - size / 2;
+      const targetY = targetCenterY - size / 2;
+      const firstLandingX = startX + (targetX - startX) * 0.68;
+      const firstLandingY = targetY + size * 0.24;
+      const firstPeakY = targetY - size * 1.82;
+      const secondPeakY = targetY - size * 1.08;
+
+      lockBallToDot(startX, startY, size);
+      await bounceArc(startX, startY, firstLandingX, firstLandingY, firstPeakY, HERO_TIMING.firstBounceDuration, size);
+      await squashBall(firstLandingX, firstLandingY, size, 1.14, 130);
+      await unsquashBall(firstLandingX, firstLandingY, size, 1.14, 120);
+      await bounceArc(firstLandingX, firstLandingY, targetX, targetY, secondPeakY, HERO_TIMING.secondBounceDuration, size);
+      await squashBall(targetX, targetY, size, 1.06, 90);
+      await unsquashBall(targetX, targetY, size, 1.06, 120);
+      lockBallToDot(targetX, targetY, size);
+    }
+
+    async function typeDots(activeSequence) {
+      revealNode(heroState.streamNodes[heroState.streamNodes.length - 2]);
+      heroState.visibleDotCount = 1;
+      positionStaticDots();
+      syncCursorGeometry();
+      showCursor();
+      await sleep(320);
+      if (activeSequence !== heroState.sequenceId) {
+        return;
+      }
+
+      revealNode(heroState.streamNodes[heroState.streamNodes.length - 1]);
+      heroState.visibleDotCount = 2;
+      positionStaticDots();
+      syncCursorGeometry();
+      showCursor();
+    }
+
+    function nextTypeDelay(lastChar) {
+      return lastChar === " " ? 260 : 188;
+    }
+
+    async function runTypingFlow(activeSequence) {
+      let commaPausePending = false;
+
+      for (let index = 0; index < currentText().length; index += 1) {
+        if (activeSequence !== heroState.sequenceId) {
+          return;
+        }
+
+        const lastChar = currentText()[index];
+        revealNode(heroState.streamNodes[index]);
+
+        if (commaPausePending && (lastChar === " " || lastChar === "\n")) {
+          hideCursor();
+          await sleep(220);
+          if (activeSequence !== heroState.sequenceId) {
+            return;
+          }
+          await blinkCursor(1, false);
+          await sleep(HERO_TIMING.settleDelay);
+          if (activeSequence !== heroState.sequenceId) {
+            return;
+          }
+          showCursor();
+          await sleep(200);
+          commaPausePending = false;
+          continue;
+        }
+
+        if (lastChar === ",") {
+          commaPausePending = true;
+        }
+
+        showCursor();
+        await sleep(nextTypeDelay(lastChar));
+      }
+
+      if (activeSequence !== heroState.sequenceId) {
+        return;
+      }
+
+      await typeDots(activeSequence);
+      if (activeSequence !== heroState.sequenceId) {
+        return;
+      }
+
+      await runFinalDotSequence(activeSequence);
+    }
+
+    async function runFinalDotSequence(activeSequence) {
+      await blinkCursor(1, false, HERO_TIMING.postDotBlinkDuration);
+      if (activeSequence !== heroState.sequenceId) {
+        return;
+      }
+      await sleep(HERO_TIMING.postDotPause);
+      if (activeSequence !== heroState.sequenceId) {
+        return;
+      }
+      await nextFrame();
+      if (activeSequence !== heroState.sequenceId) {
+        return;
+      }
+
+      const setup = prepareDotActor();
+      hideCursor();
+      const fallen = await toppleCursorRight(setup.startX, setup.startY, setup.width, setup.height);
+      if (activeSequence !== heroState.sequenceId) {
+        return;
+      }
+      await sleep(HERO_TIMING.cursorTopplePause);
+      if (activeSequence !== heroState.sequenceId) {
+        return;
+      }
+
+      const curled = await curlTailIntoBall(fallen, setup.targetSize);
+      if (activeSequence !== heroState.sequenceId) {
+        return;
+      }
+
+      await bounceBallToAnchor(
+        curled.x + curled.size / 2,
+        curled.y + curled.size / 2,
+        curled.size,
+        setup.targetCenterX,
+        setup.targetCenterY
+      );
+      if (activeSequence !== heroState.sequenceId) {
+        return;
+      }
+
+      els.dotTail.classList.remove("visible");
+      els.dotTail.removeAttribute("style");
+      els.finalDot.classList.add("pending");
+      lockActorToTarget(setup.targetLeft, setup.targetTop, setup.targetSize);
+      els.dotActor.classList.add("visible");
+      els.openDetailArrow.classList.add("visible");
+      heroState.animationComplete = true;
+      heroState.settled = true;
+    }
+
+    function revealCompleteText() {
+      buildTypingNodes();
+      syncMeasureLine();
+      for (const node of heroState.streamNodes) {
+        revealNode(node);
+      }
+      heroState.visibleDotCount = 2;
+      els.finalDot.classList.add("pending");
+    }
+
+    function settleFinalDot() {
+      hideCursor();
+      const target = positionStaticDots().third;
+      els.finalDot.classList.add("pending");
+      els.dotTail.classList.remove("visible");
+      els.dotTail.removeAttribute("style");
+      lockActorToTarget(target.left, target.top, target.size);
+      els.dotActor.classList.add("visible");
+      els.openDetailArrow.classList.add("visible");
+      syncCursorGeometry();
+    }
+
+    async function startTypingSequence() {
+      heroState.sequenceId += 1;
+      const activeSequence = heroState.sequenceId;
+      heroState.animationComplete = false;
+      heroState.settled = false;
+
+      clearText();
+      await sleep(HERO_TIMING.introDelay);
+      if (activeSequence !== heroState.sequenceId) {
+        return;
+      }
+
+      await blinkCursor(2, false);
+      if (activeSequence !== heroState.sequenceId) {
+        return;
+      }
+
+      showCursor();
+      await sleep(HERO_TIMING.settleDelay);
+      if (activeSequence !== heroState.sequenceId) {
+        return;
+      }
+
+      await runTypingFlow(activeSequence);
+    }
+
+    const heroController = {
+      start: startTypingSequence,
+      restart: function () {
+        heroState.sequenceId += 1;
+        return startTypingSequence();
+      },
+      settle: function () {
+        revealCompleteText();
+        settleFinalDot();
+        heroState.animationComplete = true;
+        heroState.settled = true;
+      },
+      cancel: function () {
+        heroState.sequenceId += 1;
+      },
+      isSettled: function () {
+        return heroState.settled;
+      }
+    };
+
+    function stopDetailMotion() {
+      if (detailState.motion) {
+        detailState.motion.cancel();
+        detailState.motion = null;
+      }
+      if (detailState.heroMotion) {
+        detailState.heroMotion.cancel();
+        detailState.heroMotion = null;
+      }
+    }
+
+    function animateDetail(opening) {
+      stopDetailMotion();
+
+      const detailDuration = opening ? 760 : 360;
+      const detailTiming = opening
+        ? { duration: detailDuration, delay: 300, easing: "cubic-bezier(0.22, 1, 0.36, 1)", fill: "forwards" }
+        : { duration: detailDuration, delay: 0, easing: "cubic-bezier(0.7, 0, 0.84, 0)", fill: "forwards" };
+
+      detailState.motion = els.detailLayer.animate(
+        opening
+          ? [{ transform: "translateY(100%)" }, { transform: "translateY(0)" }]
+          : [{ transform: "translateY(0)" }, { transform: "translateY(100%)" }],
+        detailTiming
+      );
+
+      detailState.heroMotion = els.heroCopy.animate(
+        opening
+          ? [
+              { transform: "scale(1)", opacity: 1 },
+              { transform: "scale(0.965)", opacity: 0.72, offset: 0.45 },
+              { transform: "scale(0.88)", opacity: 0.18 }
+            ]
+          : [
+              { transform: "scale(0.88)", opacity: 0.18 },
+              { transform: "scale(0.955)", opacity: 0.68, offset: detailDuration / (detailDuration + 300) },
+              { transform: "scale(1)", opacity: 1 }
+            ],
+        {
+          duration: detailDuration + 300,
+          delay: 0,
+          easing: "linear",
+          fill: "forwards"
+        }
+      );
+
+      return {
+        detailMotion: detailState.motion,
+        heroMotion: detailState.heroMotion
+      };
+    }
+
+    function showDetail(trigger) {
+      if (document.body.classList.contains("detail-open") && !document.body.classList.contains("detail-closing")) {
+        return;
+      }
+
+      detailState.returnFocus = trigger || document.activeElement;
+      detailState.openedAt = performance.now();
+      setContactExpanded(!compactContactMedia.matches);
+      document.body.classList.add("transition-active");
+      document.body.classList.remove("detail-closing");
+      document.body.classList.add("detail-open");
+      els.detailLayer.setAttribute("aria-hidden", "false");
+
+      const motions = animateDetail(true);
+      motions.detailMotion.onfinish = function () {
+        els.detailLayer.style.transform = "translateY(0)";
+        document.body.classList.remove("transition-active");
+        detailState.motion = null;
+      };
+      motions.heroMotion.onfinish = function () {
+        els.heroCopy.style.transform = "scale(0.88)";
+        els.heroCopy.style.opacity = 0.18;
+        detailState.heroMotion = null;
+      };
+
+      els.languageToggle.focus();
+    }
+
+    function hideDetail(event) {
+      if (event) {
+        event.stopPropagation();
+      }
+      if (event && event.type === "click" && performance.now() - detailState.openedAt < 420) {
+        return;
+      }
+      if (!document.body.classList.contains("detail-open")) {
+        return;
+      }
+
+      document.body.classList.add("transition-active");
+      document.body.classList.remove("detail-open");
+      document.body.classList.add("detail-closing");
+
+      const motions = animateDetail(false);
+      motions.detailMotion.onfinish = function () {
+        els.detailLayer.style.transform = "translateY(100%)";
+        els.detailLayer.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("detail-closing");
+        document.body.classList.remove("transition-active");
+        detailState.motion = null;
+
+        if (heroController.isSettled()) {
+          nextFrame().then(function () {
+            heroController.settle();
+          });
+        }
+
+        if (detailState.returnFocus) {
+          detailState.returnFocus.focus();
+        }
+      };
+      motions.heroMotion.onfinish = function () {
+        els.heroCopy.style.transform = "scale(1)";
+        els.heroCopy.style.opacity = 1;
+        detailState.heroMotion = null;
+      };
+    }
+
+    function handleDetailLayerClick(event) {
+      if (event.target === els.detailLayer) {
+        detailController.close(event);
+      }
+    }
+
+    const detailController = {
+      open: showDetail,
+      close: hideDetail,
+      isOpen: function () {
+        return document.body.classList.contains("detail-open");
+      }
+    };
+
+    function wireEvents() {
+      els.openDetailArea.addEventListener("click", function (event) {
+        detailController.open(event.currentTarget);
+      });
+      els.openDetailArea.addEventListener("keydown", function (event) {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          detailController.open(event.currentTarget);
+        }
+      });
+      els.openDetailArrow.addEventListener("click", function (event) {
+        event.stopPropagation();
+        detailController.open(event.currentTarget);
+      });
+      els.closeDetailArrow.addEventListener("click", detailController.close);
+      els.detailLayer.addEventListener("click", handleDetailLayerClick);
+      els.contactMore.addEventListener("click", function (event) {
+        event.stopPropagation();
+        setContactExpanded(!els.contactIcons.classList.contains("expanded"));
+      });
+      els.langEn.addEventListener("click", function (event) {
+        chooseDetailLanguage("en", event);
+      });
+      els.langZh.addEventListener("click", function (event) {
+        chooseDetailLanguage("zh", event);
+      });
+      els.themeToggle.addEventListener("click", toggleSiteTheme);
+      themeMedia.addEventListener("change", function () {
+        if (!siteState.siteTheme) {
+          applySiteTheme("");
+        }
+      });
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+          detailController.close(event);
+        }
+      });
+      window.addEventListener("resize", async function () {
+        syncResponsiveControls();
+
+        if (
+          document.body.classList.contains("detail-open")
+          || document.body.classList.contains("detail-closing")
+          || document.body.classList.contains("transition-active")
+        ) {
+          return;
+        }
+
+        const wasComplete = heroController.isSettled();
+        heroController.cancel();
+
+        if (wasComplete) {
+          heroController.settle();
+          return;
+        }
+
+        await nextFrame();
+        heroController.restart();
+      });
+    }
+
+    function syncHomeAfterFontsReady() {
+      fitIntroTitle();
+
+      if (
+        document.body.classList.contains("detail-open")
+        || document.body.classList.contains("detail-closing")
+        || document.body.classList.contains("transition-active")
+      ) {
+        return;
+      }
+
+      if (heroController.isSettled()) {
+        heroController.settle();
+        return;
+      }
+
+      clearText();
+      heroController.start();
+    }
+
+    function startPage() {
+      applyDetailLanguage(siteState.detailLanguage);
+      syncResponsiveControls();
+      applySiteTheme(siteState.siteTheme);
+      wireEvents();
+      clearText();
+      window.setTimeout(function () {
+        heroController.start();
+      }, 120);
+      document.fonts.ready.then(syncHomeAfterFontsReady);
+    }
+
+    startPage();
+  </script>
+</body>
+</html>
